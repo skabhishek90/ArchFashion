@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login and signup page</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()" >login</button>
+                    <button type="button" class="toggle-btn" onclick="signup()" >signup</button>
+                </div>
+                <div class="social-icons">
+                     <a href="www.google.com"><img src="google.png"></a>
+                     <a href="www.facebook.com"><img src="facebook.png"></a>
+                     <a href="www.twitter.com" ><img src="twitter.png"></a>
+                </div>
+                <form id="login" class="input-group">
+                    <input type="email,number" class="input-field" placeholder="Email or Phone" required>
+                    <input type="password" class="input-field" placeholder="Enter password" required>
+                    <input type="checkbox" class="check-box"><span>Remember password</span>
+                    <a href="../Grocery store.html"><button type="submit"  class="submit-btn">Log in</button></a>
+                </form>
+                <form id="signup" class="input-group">
+                    <input type="tel" class="input-field" placeholder="Phone number" required>
+                    <input type="email" class="input-field" placeholder="Email Id" required>
+                    <input type="password" class="input-field" placeholder="Enter password" required>
+                    <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+                    <a href="../Grocery store.html"><button type="submit"  class="submit-btn">Sign up</button></a>
+                </form>
+            </div>
+        </div>
+        
+        <script>
+            var x = document.getElementById("login");
+            var y = document.getElementById("signup");
+            var z = document.getElementById("btn");
+
+            function signup(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }function login(){
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0px";
+            }
+
+        </script>
+
+    </body>
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(BG.jpg);
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+        }
+        .form-box{
+            width: 380px;
+            height: 480px;
+            position: relative;
+            margin: 6% auto;
+            background: white;
+            padding: 5px;
+            overflow: hidden;
+        }
+        .button-box{
+            width: 220px;
+            margin: 35px auto;
+            position: relative;
+            box-shadow: 0 0 20px 9px #ff61241f;
+            border-radius: 30px;
+        }
+        .toggle-btn{
+            padding: 10px 30px;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            outline: none;
+            position: relative;
+        }
+        #btn{
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 110px;
+            height: 100%;
+            background: linear-gradient(to right,#24ff10,#06daff);
+            border-radius: 30px;
+            transition: .5s;
+        }
+        .social-icons{
+            margin: 30px auto;
+            text-align: center;
+        }
+        .social-icons img{
+            width: 30px;
+            margin: 0 12px;
+            box-shadow: 0 0 20px 0 #7f7f7f3d;
+            cursor: pointer;
+            
+        }
+        .input-group{
+            top: 180px;
+            position: absolute;
+            width: 280px;
+            transition: .5s;
+        }
+        .input-field{
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 20px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 2px solid #e9eaea;
+            color: #3e3e40;
+            font-size: 10px;
+            outline: none;
+            background: transparent;
+            transition: all 0.5s ease;
+        }
+        .input-field:focus{
+            border: 2px solid #36a4b8;
+        }    
+        .submit-btn{
+            width: 85%;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+            background: linear-gradient(to right,#24ff10,#06daff);
+            border: 0;
+            outline: none;
+            border-radius: 30px;
+        }
+        .check-box{
+            margin: 30px 10px 30px 0;
+
+        }
+        span{
+            color: #777;
+            font-size: 12px;
+            bottom: 68px;
+            position: absolute;
+        }
+        #login{
+            left: 50px;
+        }
+        #signup{
+            left: 450px;
+        }
+
+
+    </style>
+
+
+</html>
